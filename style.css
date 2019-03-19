@@ -1,0 +1,225 @@
+/* *******HOW TO USE******
+Replace --backgroundColor with your page background
+Replace --linesColor: with the desired lines color 
+
+
+*/
+:root{
+    --backgroundColor: rgb(40,40,40);
+    --linesColor: white;
+  }
+  body{
+      background-color: var(--backgroundColor);
+  }
+  #box{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 30vh;
+      margin: auto;
+      height: 300px;
+      width: 300px;
+      -webkit-animation: rocket;
+      animation: rocket;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-duration: 4s;
+      animation-duration: 4s;
+      -webkit-transform-origin: center;
+      transform-origin: center;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+  }
+  
+  #rocketBody{
+      position: relative;
+      height: 154px;
+      width: 55px;
+      margin: 30% auto;
+      border: 2px solid var(--linesColor);
+      z-index: 20;
+      background-color: var(--backgroundColor);
+  }
+  #window{
+      position: relative;
+      height: 20%;
+      width: 50%;
+      top: 10%;
+      margin: auto;
+      border-radius: 50%;
+      border: 2px solid var(--linesColor);
+  }
+  #nose{
+      position: absolute;
+      top: -52.5px;
+      left: -1.5px;
+      border-style: solid;
+      border-width: 0 29px 50px 29px;
+      border-color: transparent transparent var(--linesColor) transparent ;
+  }
+  #innerNose{
+         position: absolute;
+      top: -48px;
+      left: 2.5px;
+      border-style: solid;
+      border-width: 0 25px 44px 25px;
+      border-color: transparent transparent var(--backgroundColor) transparent ;
+  }
+  #wing{
+      position: absolute;
+      left: -63px;
+      top: 94px;
+     border-width: 30px 30px 30px 30px;
+      border-color: transparent var(--linesColor) var(--linesColor) transparent;
+      border-style: solid;
+  }
+  #wing2{
+      position: absolute;
+      right: -63px;
+      top: 94px;
+     border-width: 30px 30px 30px 30px;
+      border-color: transparent transparent var(--linesColor) var(--linesColor);
+      border-style: solid;
+  }
+  #insideWing2{
+       position: absolute;
+      right: -58.5px;
+      top: 98px;
+      border-width: 27px 27px 27px 27px;
+      border-color: transparent transparent var(--backgroundColor) var(--backgroundColor);
+      border-style: solid;
+      z-index: 2;
+  }
+  #insideWing1{
+       position: absolute;
+      left: -59px;
+      top: 98px;
+     border-width: 27px 27px 27px 27px;
+      border-color: transparent var(--backgroundColor) var(--backgroundColor) transparent;
+      border-style: solid;
+  }
+  #nosel{
+       position: absolute;
+      margin: -35% 41% 0 41%;
+      left: 6px;
+      border-style: solid;
+      border-width: 0 22px 30px 22px;
+      border-color: transparent transparent var(--linesColor) transparent ;
+  }
+  #innerNosel{
+      position: absolute;
+    margin: -34.5% 41% 0 41%;
+      left: 8px;
+      border-style: solid;
+      border-width: 0 20px 27px 20px;
+      border-color: transparent transparent var(--backgroundColor) transparent ;
+      z-index: 3;
+      
+  }
+  #exaust{
+      position: absolute;
+      left: 3px;
+      top: 165px;
+      height: 50px;
+      width: 50px;
+      margin: 30% 41% 0 41%;
+      -webkit-animation: exaust;
+      animation: exaust;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-duration: 0.1s;
+      animation-duration: 0.1s;
+      z-index: 2;
+  }
+  #bubble{
+      position: relative;
+      height: 60%;
+      width: 72%;
+      background: var(--linesColor);
+      border-radius: 50%;
+      margin: auto;
+  }
+  #triangle{
+      height: 100%;
+      position: absolute;
+      top: 20px;
+      left: 9.1px;
+      border-style: solid;
+      border-width: 20px 16px 0 16px;
+      border-color: var(--linesColor) transparent transparent transparent ;
+      -webkit-animation: subExaust;
+      animation: subExaust;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-duration: 0.1s;
+      animation-duration: 0.1s;
+  }
+  -webkit-keyframes rocket{
+      25%{
+          -webkit-transform: rotate(2deg);
+          transform : rotate(2deg)
+      
+      }
+      75%{
+          -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg)
+      }
+  }
+  
+  @-webkit-keyframes rocket{
+      25%{
+          -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
+    
+      }
+      75%{
+          -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+      
+      }
+  }
+  
+  @keyframes rocket{
+      25%{
+          -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
+    
+      }
+      75%{
+          -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+      
+      }
+  }
+  @-webkit-keyframes exaust{
+      0%{
+          height: 50px;
+      }
+      100%{
+          height: 40px;
+      }
+  }
+  @keyframes exaust{
+      0%{
+          height: 50px;
+      }
+      100%{
+          height: 40px;
+      }
+  }
+  @-webkit-keyframes subExaust{
+      0%{
+          top: 20px;
+      }
+      100%{
+          top: 18px;
+      }
+  }
+  @keyframes subExaust{
+      0%{
+          top: 20px;
+      }
+      100%{
+          top: 18px;
+      }
+  }
